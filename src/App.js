@@ -13,7 +13,9 @@ class App extends Component {
       filter: {
         price: '',
         cashback: false,
-        freeprice: false
+        freeprice: false,
+        c2c: false,
+        withdrawal: false
       }
     }
   }
@@ -30,7 +32,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to CardC</h1>
+          <h1 className="App-title">Сравнение банковских карт</h1>
         </header>
         <Filter
           onChange={this.handleChange}

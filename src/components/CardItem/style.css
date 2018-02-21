@@ -2,15 +2,16 @@
     display: flex;
     flex-direction: column;
     flex-basis: 22rem;
-    height: 12.8rem;
     margin-right: 1.5rem;
     margin-bottom: 3rem;
     padding: 5px;
     border-radius: 0.2rem;
+    background-color: #fff;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 24, 48, 0.2);
     text-align: left;
 }
 .card-list__title {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 24px;
     text-align: center;

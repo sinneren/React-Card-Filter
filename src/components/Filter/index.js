@@ -26,6 +26,26 @@ class Filter extends Component {
                     </label>
                 </div>
                 <div>
+                    <label>Бесплатный межбанк&nbsp;
+                        <input
+                            type="checkbox"
+                            name="c2c"
+                            onChange={event => this.props.onChange(event.target.name, event.target.checked)}
+                            checked={this.props.filter.c2c}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>Бесплатное снятие&nbsp;
+                        <input
+                            type="checkbox"
+                            name="withdrawal"
+                            onChange={event => this.props.onChange(event.target.name, event.target.checked)}
+                            checked={this.props.filter.withdrawal}
+                        />
+                    </label>
+                </div>
+                <div>
                     <label>Цена&nbsp;
                     <input
                         type="text"

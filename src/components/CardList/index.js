@@ -18,6 +18,12 @@ class CardList extends Component {
             if (filterArr.price !== '' && filterArr.price > 0) {
                 data = data.filter(i => (i.price <= filterArr.price))
             }
+            if (filterArr.c2c) {
+                data = data.filter(i => i.c2c);
+            }
+            if (filterArr.withdrawal) {
+                data = data.filter(i => i.withdrawal);
+            }
 
             return data;
         };
@@ -26,7 +32,17 @@ class CardList extends Component {
 
         const dataList = filteredData.map((item, index) => {
             return (
-                <CardItem key={index} name={item.name} price={item.price} freeprice={item.freeprice ? 'Да' : 'Нет'} cashback={item.cashback ? 'Да' : 'Нет'} cashback_value={item.cashback_value} />
+                <CardItem key={index}
+                    name={item.name}
+                    price={item.price}
+                    freeprice={item.freeprice ? 'Да' : 'Нет'}
+                    cashback={item.cashback ? 'Да' : 'Нет'}
+                    cashback_value={item.cashback_value}
+                    c2c={item.c2c ? 'Да' : 'Нет'}
+                    withdrawal={item.withdrawal ? 'Да' : 'Нет'}
+                    description={item.description}
+                    balance={item.balance}
+                />
             )
         });
         return (
